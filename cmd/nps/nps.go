@@ -28,6 +28,7 @@ var (
 
 func main() {
 	flag.Parse()
+	log.Println("common.GetRunPath() = ", common.GetRunPath())
 	beego.LoadAppConfig("ini", filepath.Join(common.GetRunPath(), "conf", "nps.conf"))
 	if len(os.Args) > 1 {
 		switch os.Args[1] {
